@@ -1,0 +1,31 @@
+.img_1 {
+  right: -10rem;
+}
+
+.image-animation-container {
+  position: relative; /* For absolute positioning within ImageAnimation */
+  /* Additional styling if needed */
+}
+
+.container {
+  height: 100vh;
+  background-image: url("/public//images/background.png");
+  background-position: 50%, 10%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content,
+  .image-animation-container {
+    width: 80%; /* Full width for smaller screens */
+    text-align: center;
+  }
+
+  .image-animation-container {
+    /* Adjust positioning/sizing of ImageAnimation for smaller screens */
+  }
+}

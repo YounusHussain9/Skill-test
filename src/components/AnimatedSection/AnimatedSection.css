@@ -1,0 +1,45 @@
+.image {
+  width: 200px; /* Width of each image */
+  height: 100px; /* Height of each image */
+  position: absolute;
+  transition: all 1s ease;
+}
+
+/* Position each image with a 2px gap */
+#image1 {
+  left: 0px;
+}
+#image2 {
+  left: 202px;
+} /* 200px width + 2px gap */
+#image3 {
+  left: 404px;
+}
+#image4 {
+  left: 606px;
+}
+#image5 {
+  left: 650px;
+}
+#image6 {
+  left: 730px;
+}
+#image7 {
+  left: 780px;
+}
+
+.coverImage {
+  position: absolute;
+  left: 900px; /* Position of the cover image */
+  z-index: 3; /* Keep the cover image on top */
+}
+
+.animate {
+  animation: moveToCover 1s forwards;
+}
+
+@keyframes moveToCover {
+  to {
+    left: 900px;
+  } /* Animate images to the left position of the cover image */
+}
