@@ -5,6 +5,8 @@ import Test from "../Home/Home";
 const ScrollContent = () => {
   const [lastScroll, setLastScroll] = useState(0);
   const [isEnd, setIsEnd] = useState(false);
+  const debounceTimer = useRef(null);
+
   const sectionRef = useRef(null);
 
   const pageImages = [
@@ -21,14 +23,13 @@ const ScrollContent = () => {
   const handleScroll = () => {
     if (sectionRef.current) {
       const { scrollLeft, offsetWidth, scrollWidth } = sectionRef.current;
-
       const isAtEnd = scrollLeft + offsetWidth >= scrollWidth;
-      if (isAtEnd) {
-        setIsEnd(true);
-        console.log("Reached end of horizontal scroll");
-        // Handle the end-of-scroll scenario
+
+      if (isAtEnd && !isEnd) {
+        // Debounce the end of scroll handling
+        if (debounceTimer.current) clearTimeout(debounceTimer.current);
+        debounceTimer.current = setTimeout(() => setIsEnd(true), 2000); // 100ms delay for smoother transition
       }
-      setLastScroll(scrollLeft);
     }
   };
 
@@ -38,18 +39,13 @@ const ScrollContent = () => {
       section.addEventListener("scroll", handleScroll);
     }
 
-    // Clean up the event listener
     return () => {
       if (section) {
         section.removeEventListener("scroll", handleScroll);
       }
+      if (debounceTimer.current) clearTimeout(debounceTimer.current);
     };
   }, []);
-
-  // Here you can use lastScroll as needed
-  useEffect(() => {
-    console.log("Last scroll position in section: ", lastScroll);
-  }, [lastScroll]);
 
   console.log(lastScroll);
   return (
@@ -57,7 +53,7 @@ const ScrollContent = () => {
       {isEnd ? (
         <Test />
       ) : (
-        <section>
+        <section style={{ overflow: "hidden" }}>
           <div className="smTextContainer">
             <h1 style={{ textAlign: "center" }}>
               The most <br /> comprehensive <br />{" "}
@@ -75,10 +71,11 @@ const ScrollContent = () => {
             </div>
             <div className="imageContainer">
               {pageImages.map((image, index) => (
-                <img src={image} key={index} alt="page" />
+                <>
+                  <img src={image} key={index} alt="page" />
+                </>
               ))}
             </div>
-            {isEnd ? <Test /> : null}
           </div>
         </section>
       )}
