@@ -1,26 +1,66 @@
 .img_1 {
   right: -10rem;
 }
-
+.h_br_1,
+.btn_2 {
+  display: none !important;
+}
 .image-animation-container {
   position: relative; /* For absolute positioning within ImageAnimation */
   /* Additional styling if needed */
 }
 
+.heading {
+  font-family: Neue;
+  font-weight: 400;
+}
+
 .container {
   height: 100vh;
+  background-image: url("/public/images/background.png");
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 500px) {
+  .btn_1 {
+    display: none !important;
+  }
+  .heading {
+    font-size: 30px !important;
+  }
+  .btn_2 {
+    display: block !important;
+  }
+}
 @media (max-width: 768px) {
+  .h_br_1 {
+    display: block !important;
+  }
+  .h_br_2,
+  .p_br_1 {
+    display: none !important;
+  }
+  .heading {
+    text-align: center !important;
+  }
+  .btn_1 {
+    left: 300px !important;
+  }
+  .pera {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
   .container {
     flex-direction: column;
     align-items: center;
+    padding: 0rem !important;
+    justify-content: start !important;
   }
 
-  .text-content,
+  .text_content,
   .image-animation-container {
-    width: 80%; /* Full width for smaller screens */
+    width: 100% !important; /* Full width for smaller screens */
     text-align: center;
   }
 
