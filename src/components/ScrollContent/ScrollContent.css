@@ -1,0 +1,65 @@
+.contentContainer {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  padding: 8rem;
+  align-items: center;
+  width: 90%;
+}
+
+.contentContainer.animateImages .imageContainer img {
+  /* Define your animation here */
+  transform: scale(0.5);
+  transition: transform 0.5s ease;
+}
+
+.textContainer,
+.imageContainer {
+  width: 50%;
+  flex-shrink: 0; /* Prevents the flex items from shrinking */
+}
+.textContainer {
+  /* your styles for the text container */
+}
+
+.smTextContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+
+.imageContainer img {
+  /* Add any specific styles for your images here */
+}
+
+@media (max-width: 500px) {
+  .textContainer {
+    display: none;
+  }
+  .contentContainer {
+    padding: 4.5rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  .smTextContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .smTextContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .smTextContainer {
+    display: none;
+  }
+}
