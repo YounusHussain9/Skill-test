@@ -9,8 +9,8 @@
 
 .container {
   height: 100vh;
-  background-image: url("/public//images/background.png");
-  background-position: 50%, 10%;
+  background-image: url("/public/images/background.png");
+  background-position: center;
   background-repeat: no-repeat;
 }
 @media (max-width: 768px) {
