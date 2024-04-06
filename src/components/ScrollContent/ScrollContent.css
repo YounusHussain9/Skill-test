@@ -4,7 +4,7 @@
   overflow-x: auto;
   padding: 8rem;
   align-items: center;
-  width: 90%;
+  width: 100vw;
 }
 
 .contentContainer.animateImages .imageContainer img {
@@ -17,6 +17,9 @@
 .imageContainer {
   width: 50%;
   flex-shrink: 0; /* Prevents the flex items from shrinking */
+  font-family: Neue;
+  font-weight: 400;
+  font-size: 40px;
 }
 .textContainer {
   /* your styles for the text container */
@@ -25,6 +28,9 @@
 .smTextContainer {
   display: flex;
   justify-content: center;
+  font-family: Neue;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .imageContainer {
@@ -41,14 +47,22 @@
   .textContainer {
     display: none;
   }
+  h1 {
+    font-size: 30px !important;
+  }
   .contentContainer {
     padding: 4.5rem;
+    width: 100%;
   }
 }
 
 @media (min-width: 501px) and (max-width: 767px) {
   .smTextContainer {
     display: none;
+  }
+
+  .contentContainer {
+    width: 100%;
   }
 }
 
