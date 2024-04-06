@@ -4,8 +4,6 @@ import "./AnimatedSection.css";
 const ImageAnimation = () => {
   const [animate, setAnimate] = useState(true);
 
-
-
   return (
     <div>
       <div className={`image ${animate ? "animate" : ""}`} id="image1">
