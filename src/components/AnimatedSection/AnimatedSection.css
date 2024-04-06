@@ -43,3 +43,103 @@
     left: 900px;
   } /* Animate images to the left position of the cover image */
 }
+
+@media (max-width: 500px) {
+  .coverImage {
+    left: 80px;
+    top: 410px;
+  }
+
+  /* Position each image with a 2px gap */
+  #image1 {
+    top: 410px;
+
+    left: 0px;
+  }
+  #image2 {
+    top: 410px;
+
+    left: 5px;
+  } /* 200px width + 2px gap */
+  #image3 {
+    top: 410px;
+
+    left: 10px;
+  }
+  #image4 {
+    top: 410px;
+
+    left: 25px;
+  }
+  #image5 {
+    top: 410px;
+
+    left: 40px;
+  }
+  #image6 {
+    top: 410px;
+
+    left: 50px;
+  }
+  #image7 {
+    top: 410px;
+
+    left: 60px;
+  }
+
+  @keyframes moveToCover {
+    to {
+      left: 80px;
+    } /* Animate images to the left position of the cover image */
+  }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  .coverImage {
+    left: 280px;
+    top: 450px;
+  }
+
+  /* Position each image with a 2px gap */
+  #image1 {
+    top: 450px;
+
+    left: 0px;
+  }
+  #image2 {
+    top: 450px;
+
+    left: 30px;
+  } /* 200px width + 2px gap */
+  #image3 {
+    top: 450px;
+
+    left: 45px;
+  }
+  #image4 {
+    top: 450px;
+
+    left: 50px;
+  }
+  #image5 {
+    top: 450px;
+
+    left: 70px;
+  }
+  #image6 {
+    top: 450px;
+
+    left: 80px;
+  }
+  #image7 {
+    top: 450px;
+
+    left: 80px;
+  }
+
+  @keyframes moveToCover {
+    to {
+      left: 280px;
+    } /* Animate images to the left position of the cover image */
+  }
+}
