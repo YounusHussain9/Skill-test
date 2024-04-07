@@ -51,6 +51,6 @@ body {
 }
 @font-face {
   font-family: DentonItalic;
-  src: url('/fonts/DentonCondensedTest-ThinItalic.otf');
+  src: url('./fonts/DentonCondensedTest-ThinItalic.otf');
 }
 
