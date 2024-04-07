@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import ImageAnimation from "../AnimatedSection/AnimatedSection";
 
-const Test = () => {
+const Test = ({ setIsEnd }) => {
   return (
     <div
       style={{
@@ -22,7 +22,7 @@ const Test = () => {
           className="heading"
         >
           Documented <br className="h_br_1" /> into <br className="h_br_2" />
-          200 pages{" "}
+          200 pages <br className="h_br_3" />
           <span style={{ fontStyle: "italic", fontFamily: "NeueItalic" }}>
             report of you
           </span>
@@ -45,10 +45,15 @@ const Test = () => {
             color: "#FFFFFF",
             outline: "none",
             border: "none",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
           className="btn_1"
+          onClick={() => setIsEnd(false)}
         >
           ALL REPORTS
+          <img src={"/images/forward_arrorw.svg"} alt="arrow" />
         </button>
       </div>
 
@@ -64,9 +69,13 @@ const Test = () => {
           outline: "none",
           border: "none",
           bottom: "-10rem",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
           transform: " translate(20px, 10px)",
         }}
         className="btn_2"
+        onClick={() => setIsEnd(false)}
       >
         ALL REPORTS
       </button>
