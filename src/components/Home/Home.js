@@ -23,7 +23,7 @@ const Test = ({ setIsEnd }) => {
         >
           Documented <br className="h_br_1" /> into <br className="h_br_2" />
           200 pages <br className="h_br_3" />
-          <span style={{ fontStyle: "italic", fontFamily: "NeueItalic" }}>
+          <span style={{ fontFamily: "DentonItalic" }}>
             report of you
           </span>
         </h4>
