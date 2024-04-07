@@ -94,7 +94,7 @@
   }
 }
 
-@media (min-width: 501px) and (max-width: 767px) {
+@media (min-width: 501px) and (max-width: 834px) {
   .coverImage {
     left: 280px;
     top: 450px;
