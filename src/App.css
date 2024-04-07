@@ -50,6 +50,7 @@ body {
   src: url("../public/fonts/NeueMontreal-Regular.otf");
 }
 @font-face {
-  font-family: NeueItalic;
-  src: url("../public/fonts/NeueMontreal-Italic.otf");
+  font-family: DentonItalic;
+  src: url("../public/fonts/DentonCondensedTest-ThinItalic.otf");
 }
+
