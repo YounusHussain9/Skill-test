@@ -143,3 +143,54 @@
     } /* Animate images to the left position of the cover image */
   }
 }
+
+
+@media (min-width: 900px) and (max-width: 1025px) {
+  .coverImage {
+    left: 750px;
+    top: 205px;
+  }
+
+  /* Position each image with a 2px gap */
+  #image1 {
+    top: 205px;
+
+    left: 0px;
+  }
+  #image2 {
+    top: 205px;
+
+    left: 100px;
+  } /* 200px width + 2px gap */
+  #image3 {
+    top: 205px;
+
+    left: 260px;
+  }
+  #image4 {
+    top: 205px;
+
+    left: 320px;
+  }
+  #image5 {
+    top: 205px;
+
+    left: 570px;
+  }
+  #image6 {
+    top: 205px;
+
+    left: 600px;
+  }
+  #image7 {
+    top: 205px;
+
+    left: 730px;
+  }
+
+  @keyframes moveToCover {
+    to {
+      left: 750px;
+    } /* Animate images to the left position of the cover image */
+  }
+}
