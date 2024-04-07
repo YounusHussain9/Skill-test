@@ -1,12 +1,15 @@
 .contentContainer {
   display: flex;
   gap: 3rem;
-  overflow-x: auto;
-  padding: 8rem;
+  overflow-x: scroll; /* Changed to allow scrolling */
+  padding: 8rem 0; /* Only apply vertical padding */
   align-items: center;
+  box-sizing: border-box; /* Include padding in the width calculation */
   width: 100vw;
 }
-
+.scroll_heading{
+  margin-left: 7rem;
+}
 .contentContainer.animateImages .imageContainer img {
   /* Define your animation here */
   transform: scale(0.5);
