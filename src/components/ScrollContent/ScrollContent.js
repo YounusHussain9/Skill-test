@@ -20,7 +20,7 @@ const ScrollContent = () => {
     "/images/page_8.png",
   ];
 
- const handleScroll = () => {
+  const handleScroll = () => {
     if (sectionRef.current) {
       const { scrollLeft, offsetWidth, scrollWidth } = sectionRef.current;
       const isAtEnd = scrollLeft + offsetWidth >= scrollWidth;
@@ -57,14 +57,14 @@ const ScrollContent = () => {
           <div className="smTextContainer">
             <h1 style={{ textAlign: "center" }}>
               The most <br /> comprehensive <br />{" "}
-              <span style={{ fontStyle: "italic" }}>analysis of your face</span>
+              <span style={{ fontFamily:"DentonItalic" }}>analysis of your face</span>
             </h1>
           </div>
           <div className="contentContainer" ref={sectionRef}>
-            <div className="textContainer">
+            <div  className="textContainer">
               <h1 style={{ textAlign: "start" }} className="scroll_heading">
                 The most <br /> comprehensive <br />{" "}
-                <span style={{ fontStyle: "italic" }}>
+                <span style={{ fontFamily:"DentonItalic" }}>
                   analysis of your face
                 </span>
               </h1>
