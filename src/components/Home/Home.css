@@ -2,7 +2,8 @@
   right: -10rem;
 }
 .h_br_1,
-.btn_2 {
+.btn_2,
+.h_br_3 {
   display: none !important;
 }
 .image-animation-container {
@@ -19,6 +20,7 @@
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: auto;
 }
 
 @media (max-width: 500px) {
@@ -33,7 +35,8 @@
   }
 }
 @media (max-width: 768px) {
-  .h_br_1 {
+  .h_br_1,
+  .h_br_3 {
     display: block !important;
   }
   .h_br_2,
