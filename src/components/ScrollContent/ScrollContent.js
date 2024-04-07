@@ -20,7 +20,7 @@ const ScrollContent = () => {
     "/images/page_8.png",
   ];
 
-  const handleScroll = () => {
+ const handleScroll = () => {
     if (sectionRef.current) {
       const { scrollLeft, offsetWidth, scrollWidth } = sectionRef.current;
       const isAtEnd = scrollLeft + offsetWidth >= scrollWidth;
@@ -28,7 +28,7 @@ const ScrollContent = () => {
       if (isAtEnd && !isEnd) {
         // Debounce the end of scroll handling
         if (debounceTimer.current) clearTimeout(debounceTimer.current);
-        debounceTimer.current = setTimeout(() => setIsEnd(true), 2000); // 100ms delay for smoother transition
+        debounceTimer.current = setTimeout(() => setIsEnd(true), 100); // 100ms delay for smoother transition
       }
     }
   };
