@@ -21,12 +21,14 @@
   width: 50%;
   flex-shrink: 0; /* Prevents the flex items from shrinking */
   font-family: Neue;
+
+}
+.textContainer h1 span {
   font-weight: 400;
   font-size: 40px;
-}
-.textContainer {
   /* your styles for the text container */
 }
+
 
 .smTextContainer {
   display: flex;
