@@ -45,13 +45,13 @@ const ScrollContent = () => {
       }
       if (debounceTimer.current) clearTimeout(debounceTimer.current);
     };
-  }, []);
+  }, [isEnd]);
 
   console.log(lastScroll);
   return (
     <>
       {isEnd ? (
-        <Test />
+        <Test setIsEnd={setIsEnd} />
       ) : (
         <section style={{ overflow: "hidden" }}>
           <div className="smTextContainer">
@@ -62,7 +62,7 @@ const ScrollContent = () => {
           </div>
           <div className="contentContainer" ref={sectionRef}>
             <div className="textContainer">
-              <h1 style={{ textAlign: "start" }}>
+              <h1 style={{ textAlign: "start" }} className="scroll_heading">
                 The most <br /> comprehensive <br />{" "}
                 <span style={{ fontStyle: "italic" }}>
                   analysis of your face
