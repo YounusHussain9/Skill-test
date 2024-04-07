@@ -7,7 +7,7 @@
   box-sizing: border-box; /* Include padding in the width calculation */
   width: 100vw;
 }
-.scroll_heading{
+.scroll_heading {
   margin-left: 7rem;
 }
 .contentContainer.animateImages .imageContainer img {
@@ -57,11 +57,22 @@
     padding: 4.5rem;
     width: 100%;
   }
+  .smTextContainer h1 span {
+    font-size: 30px !important;
+    font-weight: 400 !important;
+  }
 }
 
-@media (min-width: 501px) and (max-width: 767px) {
-  .smTextContainer {
+@media (min-width: 501px) and (max-width: 834px) {
+  .textContainer {
     display: none;
+  }
+  .smTextContainer {
+    display: block;
+  }
+  .smTextContainer h1 span {
+    font-size: 40px !important;
+    font-weight: 400 !important;
   }
 
   .contentContainer {
@@ -69,7 +80,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 835px) and (max-width: 1279px) {
   .smTextContainer {
     display: none;
   }
